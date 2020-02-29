@@ -1,0 +1,14 @@
+# -*- mode: restclient -*-
+# Set token and key with (setq trello-key "XXXX") and (setq trello-token "XXXX")
+:yourKey := trello-key
+:yourToken := trello-token
+:url = api.trello.com
+
+# List all my boards
+GET https://:url/1/members/me/boards?key=:yourKey&token=:yourToken
+
+# Search all issues I'm on, @me
+GET https://:url/1/search?query=@me&key=:yourKey&token=:yourToken
+
+# Everything about me
+GET https://:url/1/members/me?key=:yourKey&token=:yourToken
